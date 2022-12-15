@@ -33,7 +33,7 @@ print(f"[MIN X]:{min_x}")
 print(f"[MAX Y]:{max_y}")
 
 
-grid = [["_" for i in range(2*(max_y+1+padding)+10)] for i in range(max_y+1+padding)]
+grid = [["_" for i in range(2*(max_y+1+padding)-1+2)] for i in range(max_y+1+padding)]
 grid.append("#"*len(grid[0]))
 
 def p():
@@ -54,7 +54,7 @@ def mapping(x,min_x):
 
 temp=mapping(500,min_x)
 
-spawn=len(grid[0])//2
+spawn=len(grid)-1
 offset=spawn-temp
 
 print(f"[SAND SPAWN AT x:{spawn}]")
